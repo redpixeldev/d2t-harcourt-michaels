@@ -4,6 +4,7 @@
 
 @theme {
 	--font-*: initial;
+	--font-heading: 'Libre Caslon Text', serif;
 	--font-body: 'Lexend Deca', sans-serif;
 
 	--color-brand-primary: #3FD0CC;
