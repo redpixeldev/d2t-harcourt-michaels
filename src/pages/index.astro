@@ -6,10 +6,14 @@ import Footer from '@components/Footer.astro';
 
 <Layout title='Astro'>
 	<Header />
-	<div class=''>
-		<h1 class='mt-4 text-xl'>Home</h1>
-		<p>This is the Astro homepage page.</p>
-		<img src='/img/icon-home.png' />
+	<div class='relative'>
+		<img src="/img/bg-hero-home.webp" class="w-full h-full object-cover absolute inset-0" alt="">
+		<div class="container relative z-20 min-h-130 md:min-h-160 lg:min-h-180 xl:min-h-240 flex justify-center items-center">
+			<div class="md:w-4/5 xl:w-3/5 2xl:w-1/2 mx-auto text-center">
+				<h1 class="text-white text-3xl md:text-4xl lg:text-5xl tracking-tight pb-6 md:pb-8 lg:pb-11">Senior leadership. <span class="text-brand-primary block md:inline-block">Built on trust.</span></h1>
+				<p class="md:text-lg lg:text-xl text-white font-light lg:px-16">We connect organizations in the built environment with exceptional senior talent — through a process that's open, personal, and committed to completion.</p>
+			</div>
+		</div>
 	</div>
 	<Footer />
 </Layout>
