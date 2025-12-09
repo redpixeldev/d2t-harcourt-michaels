@@ -21,11 +21,15 @@
 @plugin "@tailwindcss/forms";
 
 @utility btn {
-	@apply transition-colors duration-300 ease-linear;
+	@apply transition-colors duration-300 ease-linear inline-block;
 }
 
 @utility btn-primary {
 	@apply bg-brand-primary text-brand-dark-blue font-light text-lg rounded-full px-9 py-2 hover:bg-brand-gold hover:text-white;
+}
+
+@utility btn-primary-small {
+	@apply bg-brand-primary text-brand-dark-blue text-lg rounded-full px-6 py-2.5 hover:bg-brand-gold hover:text-white;
 }
 
 @layer base {
