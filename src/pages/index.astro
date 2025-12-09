@@ -47,77 +47,145 @@ import Footer from '@components/Footer.astro';
 			</div>
 		</div>
 	</div>
-	<div class="relative">
-		<img src="/img/global-reach-image.webp" class="w-full sm:w-4/5 md:w-3/4 lg:w-1/2 h-68 sm:h-auto sm:max-h-80 md:max-h-86 lg:max-h-140 object-cover absolute top-0 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-0 object-bottom" alt="">
-		<div class="container relative z-20 pt-8 pb-14 sm:py-20 xl:py-32">
-			<div class="w-[90%] sm:w-full lg:w-[90%] mx-auto flex flex-col lg:flex-row gap-32 xs:gap-40 lg:gap-20 justify-between">
-				<di class="w-5/6 sm:w-1/2 lg:w-2/5 2xl:w-1/3 text-center text-white mx-auto lg:mx-0">
+	<div class="relative" x-data="sectorModal()">
+		<div class="relative z-30">
+			<img src="/img/global-reach-image.webp" class="w-full sm:w-4/5 md:w-2/3 lg:w-1/2 h-70 md:h-80 lg:h-100 xl:h-130 2xl:h-140 object-cover absolute top-0 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-0 object-bottom rounded-b-full" alt="">
+			<di class="w-full sm:w-4/5 md:w-2/3 lg:w-1/2 text-center text-white relative z-30 lg:absolute left-0 top-8 lg:top-20 xl:top-32">
+				<div class="w-4/5 sm:w-1/2 md:w-2/5 lg:w-2/3 xl:w-1/2 mx-auto">
 					<h2 class="text-2xl sm:text-3xl md:text-4xl font-medium pb-5 md:pb-7">Global reach.</h2>
-					<p class="font-light text-lg sm:text-xl lg:text-2xl xl:px-10 2xl:px-0">Helping businesses shape not only their future, but also the future of the planet.</p>
-				</di>
-				<div class="lg:w-2/5 xl:w-1/3">
+					<p class="font-light text-lg sm:text-xl lg:text-2xl">Helping businesses shape not only their future, but also the future of the planet.</p>
+				</div>
+			</di>
+		</div>
+		<div class="container relative z-20 pt-44 pb-14 md:pt-50 lg:pt-20 md:pb-20 xl:py-32">
+			<div class="w-[90%] sm:w-full lg:w-[90%] xl:w-[94%] xl:2-[90%] mx-auto">
+				<div class="lg:w-2/5 xl:w-1/3 ml-auto">
 					<h2 class="text-2xl sm:text-3xl md:text-4xl font-medium pb-7 md:pb-10 text-brand-gold">Sector expertise</h2>
 					<ul class="border-t border-brand-gold flex flex-col">
 						<li class="border-brand-gold border-b py-4 md:py-5 font-medium text-lg md:text-xl lg:text-2xl md:font-light hover:text-brand-gold btn">
-							<a href="/" class="flex justify-between gap-3 pr-1 items-center">
+							<button type="button" @click="modalOpen = true; selectedSector = 'building'; imageError = false" class="flex justify-between gap-3 pr-1 items-center w-full">
 									Building
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-brand-gold">
 									<path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
 								</svg>
-							</a>
+							</button>
 						</li>
 						<li class="border-brand-gold border-b py-4 md:py-5 font-medium text-lg md:text-xl lg:text-2xl md:font-light hover:text-brand-gold btn">
-							<a href="/" class="flex justify-between gap-3 pr-1 items-center ">
+							<button type="button" @click="modalOpen = true; selectedSector = 'infrastructure'; imageError = false" class="flex justify-between gap-3 pr-1 items-center w-full">
 								Infrastructure
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-brand-gold">
 									<path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
 								</svg>
-							</a>
+							</button>
 						</li>
 						<li class="border-brand-gold border-b py-4 md:py-5 font-medium text-lg md:text-xl lg:text-2xl md:font-light hover:text-brand-gold btn">
-							<a href="/" class="flex justify-between gap-3 pr-1 items-center ">
+							<button type="button" @click="modalOpen = true; selectedSector = 'environment'; imageError = false" class="flex justify-between gap-3 pr-1 items-center w-full">
 								Environment
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-brand-gold">
 									<path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
 								</svg>
-							</a>
+							</button>
 						</li>
 						<li class="border-brand-gold border-b py-4 md:py-5 font-medium text-lg md:text-xl lg:text-2xl md:font-light hover:text-brand-gold btn">
-							<a href="/" class="flex justify-between gap-3 pr-1 items-center ">
+							<button type="button" @click="modalOpen = true; selectedSector = 'energy'; imageError = false" class="flex justify-between gap-3 pr-1 items-center w-full">
 								Energy
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-brand-gold">
 									<path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
 								</svg>
-							</a>
+							</button>
 						</li>
 						<li class="border-brand-gold border-b py-4 md:py-5 font-medium text-lg md:text-xl lg:text-2xl md:font-light hover:text-brand-gold btn">
-							<a href="/" class="flex justify-between gap-3 pr-1 items-center">
+							<button type="button" @click="modalOpen = true; selectedSector = 'advisory'; imageError = false" class="flex justify-between gap-3 pr-1 items-center w-full">
 								Advisory
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-brand-gold">
 									<path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
 								</svg>
-							</a>
+							</button>
 						</li>
 						<li class="border-brand-gold border-b py-4 md:py-5 font-medium text-lg md:text-xl lg:text-2xl md:font-light hover:text-brand-gold btn">
-							<a href="/" class="flex justify-between gap-3 pr-1 items-center ">
+							<button type="button" @click="modalOpen = true; selectedSector = 'property'; imageError = false" class="flex justify-between gap-3 pr-1 items-center w-full">
 								Property
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-brand-gold">
 									<path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
 								</svg>
-							</a>
+							</button>
 						</li>
 						<li class="border-brand-gold border-b py-4 md:py-5 font-medium text-lg md:text-xl lg:text-2xl md:font-light hover:text-brand-gold btn">
-							<a href="/" class="flex justify-between gap-3 pr-1 items-center ">
+							<button type="button" @click="modalOpen = true; selectedSector = 'corporate'; imageError = false" class="flex justify-between gap-3 pr-1 items-center w-full">
 								Corporate
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-brand-gold">
 									<path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
 								</svg>
-							</a>
+							</button>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
+
+		<!-- Modal -->
+		<div
+			x-show="modalOpen"
+			x-effect="modalOpen ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto'"
+			x-transition:enter="transition ease-out duration-500"
+			x-transition:enter-start="translate-x-full opacity-0"
+			x-transition:enter-end="translate-x-0 opacity-100"
+			x-transition:leave="transition ease-in duration-400"
+			x-transition:leave-start="translate-x-0 opacity-100"
+			x-transition:leave-end="translate-x-full opacity-0"
+			class="fixed inset-0 z-60"
+			style="display: none;"
+		>
+		<!-- Backdrop -->
+		<div
+			@click="modalOpen = false"
+			class="fixed inset-0 bg-black/50 z-50"
+			x-transition:enter="transition ease-out duration-300"
+			x-transition:enter-start="opacity-0"
+			x-transition:enter-end="opacity-100"
+			x-transition:leave="transition ease-in duration-300"
+			x-transition:leave-start="opacity-100"
+			x-transition:leave-end="opacity-0"
+		></div>
+
+		<!-- Modal Content -->
+		<div class="absolute top-0 right-0 sm:w-[94%] h-full z-60">
+			<div class="relative">
+				<img
+					:src="`/img/${sectors[selectedSector]?.image || 'building-image.webp'}`"
+					@error="imageError = true"
+					@load="imageError = false"
+					class="absolute right-0 top-0 w-full h-66 xl:h-82 object-cover"
+					alt="">
+				<div
+					:class="imageError ? 'bg-brand-dark-blue' : 'bg-brand-dark-blue/50'"
+					class="absolute z-10 inset-0"></div>
+				<button type="button" @click="modalOpen = false" class="absolute top-6 right-6 text-white z-20">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+					</svg>
+				</button>
+				<div class="container relative z-30 py-20 md:py-28 xl:py-36">
+					<h3 class="text-3xl md:text-4xl text-white font-bold" x-text="sectors[selectedSector]?.title"></h3>
+				</div>
+			</div>
+			<div class="relative z-40 bg-white shadow-lg">
+				<div class="container pt-4 lg:pt-12 xl:pt-20 pb-6 lg:pb-10 xl:pb-20">
+					<!-- Dynamic Content -->
+					<div x-show="sectors[selectedSector]" class="flex flex-col-reverse lg:flex-row gap-0 lg:gap-20 2xl:gap-24 prose max-w-full prose-p:font-light prose-p:leading-9 prose-p:text-xl xl:prose-p:text-2xl prose-headings:font-heading prose-h3:text-2xl xl:prose-h3:text-3xl prose-headings:text-brand-gold prose-headings:font-normal prose-h3:leading-10 xl:prose-h3:leading-12">
+						<div class="lg:w-3/5 2xl:w-2/3">
+							<template x-for="(paragraph, index) in sectors[selectedSector]?.paragraphs || []" :key="index">
+								<p x-text="paragraph"></p>
+							</template>
+						</div>
+						<div class="lg:w-2/5 2xl:w-1/3">
+							<h3 x-text="sectors[selectedSector]?.quote"></h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	</div>
 	<div class="relative">
 		<img src="/img/bg-facts.webp" class="w-full h-full absolute inset-0 object-cover z-10" alt="">
@@ -147,3 +215,85 @@ import Footer from '@components/Footer.astro';
 	</div>
 	<Footer />
 </Layout>
+
+<script is:inline>
+	function sectorModal() {
+		return {
+			modalOpen: false,
+			selectedSector: '',
+			imageError: false,
+			sectors: {
+				building: {
+					title: 'Building',
+					image: 'building-image.webp',
+					paragraphs: [
+						"The building sector is evolving fast around the globe, with demand spanning residential, commercial, and industrial developments, cultural landmarks, and data centres. Behind this growth lies increasing complexity—driven by sustainability targets, advanced engineering, and the need for resilient, future-ready spaces.",
+						"Harcourt Michaels helps organisations appoint senior leaders who combine technical excellence with strategic vision. From net-zero housing to high-performance data centres and world-class cultural venues, success depends on leadership that can navigate complexity and deliver impact.",
+						"Increasingly, this means embracing digital innovation and smart building technologies — creating spaces that are efficient, connected, and adaptable for the future. We bring sector insight and trusted partnerships to every search, ensuring clients secure talent that shapes the built environment."
+					],
+					quote: "From net-zero housing to high-performance data centres and world-class cultural venues, success depends on leadership that can navigate complexity and deliver impact."
+				},
+				infrastructure: {
+					title: 'Infrastructure',
+					image: 'building-image.webp',
+					paragraphs: [
+						"Infrastructure projects are the backbone of modern societies, from transport networks and utilities to digital connectivity and social infrastructure. The sector faces unprecedented challenges—aging assets, climate resilience, and the need for sustainable, future-proof solutions.",
+						"Harcourt Michaels connects clients with transformational leaders who can navigate complex stakeholder landscapes, deliver large-scale programmes, and drive innovation across civil engineering, transport, water, and energy infrastructure.",
+						"Whether it's smart cities, renewable energy networks, or resilient transportation systems, we help organizations find the leadership talent that turns ambitious infrastructure visions into reality."
+					],
+					quote: "Infrastructure leadership requires the ability to balance technical excellence, stakeholder engagement, and long-term strategic thinking."
+				},
+				environment: {
+					title: 'Environment',
+					image: 'building-image.webp',
+					paragraphs: [
+						"Environmental challenges have never been more urgent. From climate adaptation and biodiversity to waste management and circular economy models, organizations need leaders who can drive meaningful change while balancing commercial realities.",
+						"Harcourt Michaels specializes in finding senior professionals who combine environmental expertise with business acumen—leaders who can embed sustainability into strategy, engage stakeholders, and deliver measurable impact.",
+						"We work with consultancies, public bodies, and private sector organizations to appoint the environmental leaders shaping our collective future."
+					],
+					quote: "Environmental leadership demands both technical depth and the strategic vision to drive systemic change."
+				},
+				energy: {
+					title: 'Energy',
+					image: 'building-image.webp',
+					paragraphs: [
+						"The energy sector is undergoing its most significant transformation in generations. Renewable energy, grid modernization, energy storage, and decarbonization are reshaping how we power the world—and the leadership needed to make it happen.",
+						"Harcourt Michaels partners with energy organizations to find leaders who can navigate this transition—whether in renewables, nuclear, oil and gas, or emerging technologies like hydrogen and battery storage.",
+						"From project development to asset management and policy, we help clients secure the strategic talent that will define the future of energy."
+					],
+					quote: "Energy leadership requires the ability to balance innovation, commercial viability, and the urgent need for decarbonization."
+				},
+				advisory: {
+					title: 'Advisory',
+					image: 'building-image.webp',
+					paragraphs: [
+						"Advisory firms across engineering, environmental, and infrastructure consulting need leaders who can win work, grow practices, and deliver complex multi-disciplinary projects with excellence.",
+						"Harcourt Michaels understands the consultancy landscape—from global firms to specialist boutiques. We help organizations appoint partners, directors, and technical specialists who combine deep expertise with commercial drive and client relationship skills.",
+						"Whether you're expanding into new markets, strengthening technical capability, or building leadership bench strength, we find the talent that drives consultancy success."
+					],
+					quote: "Advisory leadership requires technical credibility, commercial awareness, and the ability to build lasting client relationships."
+				},
+				property: {
+					title: 'Property',
+					image: 'building-image.webp',
+					paragraphs: [
+						"The property sector spans development, investment, asset management, and urban regeneration. Success requires leaders who understand markets, manage risk, and create value—whether in commercial, residential, or mixed-use developments.",
+						"Harcourt Michaels works with developers, investors, and real estate platforms to appoint senior leaders across all aspects of the property lifecycle—from land acquisition and planning to construction delivery and operational management.",
+						"We understand what it takes to succeed in property leadership and help clients find the talent that drives returns, mitigates risk, and shapes the places where people live and work."
+					],
+					quote: "Property leadership combines financial acumen, market insight, and the ability to create places that deliver lasting value."
+				},
+				corporate: {
+					title: 'Corporate',
+					image: 'building-image.webp',
+					paragraphs: [
+						"Behind every successful organization in the built environment is a strong corporate function—finance, HR, IT, marketing, legal, and operations. These roles are critical enablers of growth, performance, and resilience.",
+						"Harcourt Michaels helps clients appoint senior corporate professionals who understand sector-specific challenges and can drive transformation across functions. From CFOs and CIOs to HR Directors and Marketing leaders, we find corporate talent with the right blend of functional expertise and commercial understanding.",
+						"Whether you're scaling, restructuring, or strengthening governance, we connect you with corporate leaders who enable your business to thrive."
+					],
+					quote: "Corporate leadership in the built environment requires both functional excellence and deep understanding of sector dynamics."
+				}
+			}
+		}
+	}
+</script>
