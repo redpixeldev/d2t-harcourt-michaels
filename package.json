@@ -13,6 +13,7 @@
 		"astro": "astro"
 	},
 	"dependencies": {
+		"@astrojs/cloudflare": "^12.6.12",
 		"@tailwindcss/forms": "^0.5.10",
 		"@tailwindcss/postcss": "4.0.0",
 		"@tailwindcss/typography": "^0.5.16",
