@@ -6,6 +6,126 @@ import Footer from '@components/Footer.astro';
 
 <Layout title='Astro'>
 	<Header />
+	<div class="relative" x-data="sectorModal()">
+		<div class="relative z-30">
+			<img src="/img/leadership-image.webp" class="w-3/5 sm:w-3/4 md:w-2/3 lg:w-2/5 xl:w-[37%] h-44 sm:h-70 md:h-80 lg:h-100 xl:h-130 2xl:h-140 object-cover absolute top-0 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-0 object-bottom rounded-b-full" alt="">
+		</div>
+		<div class="container relative z-30 pt-52 sm:pt-80 md:pt-90 lg:pt-24 xl:pt-30 pb-20 md:pb-24 lg:pb-32 xl:pb-48">
+			<div class="w-[90%] sm:w-full lg:w-[90%] xl:w-[94%] 2xl:w-[90%] mx-auto flex flex-col lg:flex-row justify-between">
+				<div class="text-center lg:text-left pb-10">
+					<h1 class="text-2xl sm:text-3xl md:text-4xl lg:ext-5xl xl:text-6xl font-medium text-brand-dark-blue pb-3 md:pb-4">Leadership Team</h1>
+					<p class="block lg:hidden font-light text-lg text-brand-dark-blue">Helping businesses shape not only their future, but also the future of the planet.</p>
+				</div>
+				<div class="lg:w-2/5">
+					<ul class="border-t border-brand-gold flex flex-col">
+						<li>
+							<button type="button" @click="modalOpen = true; selectedSector = 'building'; imageError = false" class="flex justify-between gap-3 pr-1 items-center w-full border-brand-gold border-b py-5 md:py-6 hover:text-brand-gold btn">
+									<div class="flex flex-col items-start font-medium text-lg md:text-xl lg:text-2xl">
+										Pete Easby
+									  <span class="font-light">Managing Director</span>
+									</div>
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-brand-gold">
+									<path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+								</svg>
+							</button>
+						</li>
+						<li>
+							<button type="button" @click="modalOpen = true; selectedSector = 'infrastructure'; imageError = false" class="flex justify-between gap-3 pr-1 items-center w-full border-brand-gold border-b py-5 md:py-6 hover:text-brand-gold btn">
+								<div class="flex flex-col items-start font-medium text-lg md:text-xl lg:text-2xl">
+									Cathy Harcourt
+									<span class="font-light">Director</span>
+								</div>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-brand-gold">
+									<path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+								</svg>
+							</button>
+						</li>
+						<li>
+							<button type="button" @click="modalOpen = true; selectedSector = 'environment'; imageError = false" class="flex justify-between gap-3 pr-1 items-center w-full border-brand-gold border-b py-5 md:py-6 hover:text-brand-gold btn">
+								<div class="flex flex-col items-start font-medium text-lg md:text-xl lg:text-2xl">
+									Luke Jarvis
+									<span class="font-light">Director</span>
+								</div>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-brand-gold">
+									<path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+								</svg>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div
+			x-show="modalOpen"
+			x-effect="modalOpen ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto'"
+			x-transition:enter="transition ease-out duration-500"
+			x-transition:enter-start="translate-x-full opacity-0"
+			x-transition:enter-end="translate-x-0 opacity-100"
+			x-transition:leave="transition ease-in duration-400"
+			x-transition:leave-start="translate-x-0 opacity-100"
+			x-transition:leave-end="translate-x-full opacity-0"
+			class="fixed inset-0 z-60"
+			style="display: none;"
+		>
+		<!-- Backdrop -->
+		<div
+			@click="modalOpen = false"
+			class="fixed inset-0 bg-black/50 z-50"
+			x-transition:enter="transition ease-out duration-300"
+			x-transition:enter-start="opacity-0"
+			x-transition:enter-end="opacity-100"
+			x-transition:leave="transition ease-in duration-300"
+			x-transition:leave-start="opacity-100"
+			x-transition:leave-end="opacity-0"
+		></div>
+
+		<!-- Modal Content -->
+		<div class="absolute top-0 right-0 sm:w-[94%] h-full z-60 overflow-y-auto">
+			<img
+				x-show="sectors[selectedSector]?.image && !imageError"
+				:src="`/img/${sectors[selectedSector]?.image}`"
+				@error="imageError = true"
+				@load="imageError = false"
+				class="w-2/3 sm:w-[45%] md:w-2/5 lg:w-[35%] xl:w-2/5 2xl:w-[30%] h-56 sm:h-64 md:h-70 lg:h-110 xl:h-130 object-cover absolute top-0 right-16 md:right-20 lg:right-24 xl:right-36 z-20 object-bottom rounded-b-full z-40"
+				alt="">
+			<div class="relative bg-[#3FD0CC]">
+				<button
+					type="button"
+					@click="modalOpen = false"
+					class="absolute top-4 right-4 md:top-6 md:right-6 text-black z-50 p-2 hover:bg-white/10 rounded-lg transition-colors touch-manipulation"
+					aria-label="Close modal">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 md:size-10">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+					</svg>
+				</button>
+				<div
+					class="container relative z-30"
+					:class="sectors[selectedSector]?.image && !imageError ? 'pt-64 sm:pt-40 pb-10 sm:pb-12 lg:py-28 xl:py-36' : 'py-16 md:py-20 lg:py-28 xl:py-36'">
+					<h3 class="text-3xl md:text-4xl font-semibold pb-5" x-text="sectors[selectedSector]?.title"></h3>
+					<p class="text-xl md:text-2xl font-light" x-text="sectors[selectedSector]?.role"></p>
+					<a href="/" class="text-xl md:text-2xl font-light" x-text="sectors[selectedSector]?.email"></a>
+				</div>
+			</div>
+			<div class="relative z-20 bg-white shadow-lg">
+				<div class="container pt-4 lg:pt-12 xl:pt-20 pb-6 lg:pb-10 xl:pb-20">
+					<!-- Dynamic Content -->
+					<div x-show="sectors[selectedSector]" class="lg:pr-6 xl:pr-12 2xl:pr-16 flex flex-col-reverse lg:flex-row gap-0 lg:gap-20 2xl:gap-24 prose max-w-full prose-p:font-light prose-p:leading-7 sm:prose-p:leading-9 prose-p:text-lg sm:prose-p:text-xl xl:prose-p:text-2xl prose-headings:font-heading prose-h3:text-xl sm:prose-h3:text-2xl xl:prose-h3:text-3xl prose-headings:text-brand-gold prose-headings:font-normal prose-h3:leading-8 sm:prose-h3:leading-10 xl:prose-h3:leading-12">
+						<div class="lg:w-3/5 2xl:w-2/3">
+							<template x-for="(paragraph, index) in sectors[selectedSector]?.paragraphs || []" :key="index">
+								<p x-html="paragraph"></p>
+							</template>
+						</div>
+						<div class="lg:w-2/5 2xl:w-1/3 lg:pt-16 xl:pt-20">
+							<h3 x-text="sectors[selectedSector]?.quote"></h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
 	<div class="relative">
 		<div class="relative z-30">
 			<img src="/img/sustainability-image.webp" class="w-3/5 sm:w-3/4 md:w-2/3 lg:w-1/2 h-44 sm:h-70 md:h-80 lg:h-100 xl:h-130 2xl:h-140 object-cover absolute top-0 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-0 object-bottom rounded-b-full" alt="">
@@ -36,3 +156,51 @@ import Footer from '@components/Footer.astro';
 	</div>
 	<Footer />
 </Layout>
+
+<script is:inline>
+	function sectorModal() {
+		return {
+			modalOpen: false,
+			selectedSector: '',
+			imageError: false,
+			sectors: {
+				building: {
+					title: 'Pete Easby',
+					role: 'Managing Director',
+					email: 'peteh@harcourtmichaels.com',
+					image: 'cathy-image.webp',
+					paragraphs: [
+						'<strong>Cathy brings over 25 years of executive search expertise, with two decades dedicated to shaping leadership in the built environment. Known for her tenacious, hands-on approach, she partners with boards and senior teams to deliver strategic appointments that drive long-term impact.</strong>',
+						"Her deep expertise in research and strategy means she stays close to every brief, combining sector insight with up-to-date search tools to identify high-calibre candidates. Many of her assignments form part of long-term partnerships, where she works across multiple projects to support evolving leadership needs.",
+						"Recent assignments at Harcourt Michaels include senior hires in energy, sustainability, transport planning, project management, cost consulting, marketing, finance, and advisory."
+					],
+					quote: "Search takes persistence, insight, and a genuine curiosity about people. That's how we find the decision-makers who really make a difference."
+				},
+				infrastructure: {
+					title: 'Cathy Harcourt',
+					role: 'Director',
+					email: 'cathyh@harcourtmichaels.com',
+					image: 'cathy-image.webp',
+					paragraphs: [
+						'<strong>Cathy brings over 25 years of executive search expertise, with two decades dedicated to shaping leadership in the built environment. Known for her tenacious, hands-on approach, she partners with boards and senior teams to deliver strategic appointments that drive long-term impact.</strong>',
+						"Her deep expertise in research and strategy means she stays close to every brief, combining sector insight with up-to-date search tools to identify high-calibre candidates. Many of her assignments form part of long-term partnerships, where she works across multiple projects to support evolving leadership needs.",
+						"Recent assignments at Harcourt Michaels include senior hires in energy, sustainability, transport planning, project management, cost consulting, marketing, finance, and advisory."
+					],
+					quote: "Search takes persistence, insight, and a genuine curiosity about people. That's how we find the decision-makers who really make a difference."
+				},
+				environment: {
+					title: 'Luke Jarvis',
+					role: 'Director',
+					email: 'lukeh@harcourtmichaels.com',
+					image: 'cathy-image.webp',
+					paragraphs: [
+						'<strong>Cathy brings over 25 years of executive search expertise, with two decades dedicated to shaping leadership in the built environment. Known for her tenacious, hands-on approach, she partners with boards and senior teams to deliver strategic appointments that drive long-term impact.</strong>',
+						"Her deep expertise in research and strategy means she stays close to every brief, combining sector insight with up-to-date search tools to identify high-calibre candidates. Many of her assignments form part of long-term partnerships, where she works across multiple projects to support evolving leadership needs.",
+						"Recent assignments at Harcourt Michaels include senior hires in energy, sustainability, transport planning, project management, cost consulting, marketing, finance, and advisory."
+					],
+					quote: "Search takes persistence, insight, and a genuine curiosity about people. That's how we find the decision-makers who really make a difference."
+				}
+			}
+		}
+	}
+</script>
