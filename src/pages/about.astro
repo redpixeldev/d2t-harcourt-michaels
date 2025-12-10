@@ -20,16 +20,16 @@ import Footer from '@components/Footer.astro';
 	</div>
 
 	<div class="bg-brand-dark-blue z-10 relative">
-		<div class="absolute inset-0 w-full h-full bg-[linear-gradient(0deg,rgba(63,208,204,0)_0%,rgba(63,208,204,0.35)_40.87%,rgba(63,208,204,0.35)_61.06%,rgba(63,208,204,0)_100%)]"></div>
+		<div class="absolute inset-0 w-full h-full z-20 bg-[linear-gradient(0deg,rgba(63,208,204,0)_0%,rgba(63,208,204,0.35)_40.87%,rgba(63,208,204,0.35)_61.06%,rgba(63,208,204,0)_100%)]"></div>
 
-		<div class="container pt-0 lg:pt-40 xl:pt-52 2xl:pt-60 pb-14 sm:pb-16 lg:pb-28 xl:pb-32 2xl:pb-40">
+		<div class="container relative z-30 pt-0 lg:pt-40 xl:pt-52 2xl:pt-60 pb-14 sm:pb-16 lg:pb-28 xl:pb-32 2xl:pb-40">
 			<div class="flex flex-col lg:flex-row gap-5 lg:gap-0 xl:divide-x divide-white text-white font-light justify-center lg:text-xl text-center">
-				<a href="/" class="lg:px-6 underline lg:no-underline">Leadership Team</a>
-				<a href="/" class="lg:px-6 underline lg:no-underline">Equality, Diversity & Inclusion</a>
-				<a href="/" class="lg:px-6 underline lg:no-underline">Sustainability</a>
+				<a href="/about#leadership" class="lg:px-6 underline lg:no-underline hover:text-brand-gold btn">Leadership Team</a>
+				<a href="/about#equality" class="lg:px-6 underline lg:no-underline hover:text-brand-gold btn">Equality, Diversity & Inclusion</a>
+				<a href="/about#sustainability" class="lg:px-6 underline lg:no-underline hover:text-brand-gold btn">Sustainability</a>
 			</div>
 		</div>
-		<div class="relative pb-12 md:pb-10 lg:pb-16 xl:pb-20 2xl:pb-30">
+		<div class="relative z-30 pb-12 md:pb-10 lg:pb-16 xl:pb-20 2xl:pb-30">
 			<img src="/img/team-image.webp" class="absolute inset-x-0 top-0 w-full h-28 sm:h-40 md:h-66 lg:h-80 xl:h-95 object-bottom" alt="">
 			<div class="container pt-36 sm:pt-48 md:py-16 lg:py-18 xl:py-24 relative z-20">
 				<div class="md:w-3/5 lg:w-1/2 mx-auto text-center">
@@ -61,7 +61,7 @@ import Footer from '@components/Footer.astro';
 		</div>
 	</div>
 
-	<div class="relative" x-data="sectorModal()">
+	<div class="relative" id="leadership" x-data="sectorModal()">
 		<div class="relative z-30">
 			<img src="/img/leadership-image.webp" class="w-3/5 sm:w-3/4 md:w-2/3 lg:w-2/5 xl:w-[37%] h-44 sm:h-70 md:h-80 lg:h-100 xl:h-130 2xl:h-140 object-cover absolute top-0 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-0 object-bottom rounded-b-full" alt="">
 		</div>
@@ -182,7 +182,7 @@ import Footer from '@components/Footer.astro';
 	</div>
 	</div>
 
-	<div class="relative min-h-48 sm:min-h-70 md:min-h-100 lg:min-h-110 xl:min-h-150 flex items-center justify-center">
+	<div id="equality" class="relative min-h-48 sm:min-h-70 md:min-h-100 lg:min-h-110 xl:min-h-150 flex items-center justify-center">
 		<img src="/img/shape-white.webp" class="absolute -top-px inset-x-0 w-full object-cover object-bottom h-auto z-30" alt="">
 		<img src="/img/equality-diversity-and-inclution.webp" class="absolute inset-0 w-full h-full object-cover" alt="">
 		<div class="absolute z-20 bg-brand-dark-blue/50 inset-0"></div>
@@ -212,7 +212,7 @@ import Footer from '@components/Footer.astro';
 		</div>
 	</div>
 
-	<div class="relative">
+	<div id="sustainability" class="relative">
 		<div class="relative z-30">
 			<img src="/img/sustainability-image.webp" class="w-3/5 sm:w-3/4 md:w-2/3 lg:w-1/2 h-44 sm:h-70 md:h-80 lg:h-100 xl:h-130 2xl:h-140 object-cover absolute top-0 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-0 object-bottom rounded-b-full" alt="">
 			<div class="bg-brand-dark-blue/50 z-20 w-3/5 sm:w-3/4 md:w-2/3 lg:w-1/2 h-44 sm:h-70 md:h-80 lg:h-100 xl:h-130 2xl:h-140 object-cover absolute top-0 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-0 rounded-b-full"></div>
