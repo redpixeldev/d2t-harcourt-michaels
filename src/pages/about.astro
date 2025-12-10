@@ -6,6 +6,61 @@ import Footer from '@components/Footer.astro';
 
 <Layout title='Astro'>
 	<Header />
+	<div class="bg-brand-dark-blue">
+		<div class="container">
+			<div class="relative pt-60 sm:pt-80 lg:pt-36 xl:pt-44 xl:pt-52 pb-16 lg:pb-32 xl:pb-40">
+				<img src="/img/about-hero-image.webp" class="w-full z-20 sm:w-3/4 md:w-2/3 lg:w-[45%] 2xl:w-2/5 h-52 sm:h-70 lg:h-140 xl:h-180 object-cover absolute top-0 right-0 sm:-translate-x-1/6 md:-translate-x-1/4 lg:translate-x-0 rounded-b-full" alt="">
+				<div class="bg-brand-dark-blue/70 lg:bg-brand-dark-blue/50 z-20 w-full sm:w-3/4 md:w-2/3 lg:w-[45%] 2xl:w-2/5 h-52 sm:h-70 lg:h-140 xl:h-180 object-cover absolute top-0 right-0 sm:-translate-x-1/6 md:-translate-x-1/4 lg:translate-x-0 rounded-b-full"></div>
+				<div class="lg:w-2/5 xl:w-[45%] text-center lg:text-left">
+					<h3 class="text-brand-gold font-medium text-2xl pb-4 lg:pb-1">About us</h3>
+					<p class="text-white text-lg lg:text-xl xl:text-2xl font-light lg:font-medium leading-8 xl:leading-10">People are at the heart of everything we do. Through openness, respect, and a rigorous, inclusive search process, our experienced team ensures confidentiality and integrity at every step—acting as a true extension of your business and a trusted advisor.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="bg-brand-dark-blue z-10 relative">
+		<div class="absolute inset-0 w-full h-full bg-[linear-gradient(0deg,rgba(63,208,204,0)_0%,rgba(63,208,204,0.35)_40.87%,rgba(63,208,204,0.35)_61.06%,rgba(63,208,204,0)_100%)]"></div>
+
+		<div class="container pt-0 lg:pt-40 xl:pt-52 2xl:pt-60 pb-14 sm:pb-16 lg:pb-28 xl:pb-32 2xl:pb-40">
+			<div class="flex flex-col lg:flex-row gap-5 lg:gap-0 xl:divide-x divide-white text-white font-light justify-center lg:text-xl text-center">
+				<a href="/" class="lg:px-6 underline lg:no-underline">Leadership Team</a>
+				<a href="/" class="lg:px-6 underline lg:no-underline">Equality, Diversity & Inclusion</a>
+				<a href="/" class="lg:px-6 underline lg:no-underline">Sustainability</a>
+			</div>
+		</div>
+		<div class="relative pb-12 md:pb-10 lg:pb-16 xl:pb-20 2xl:pb-30">
+			<img src="/img/team-image.webp" class="absolute inset-x-0 top-0 w-full h-28 sm:h-40 md:h-66 lg:h-80 xl:h-95 object-bottom" alt="">
+			<div class="container pt-36 sm:pt-48 md:py-16 lg:py-18 xl:py-24 relative z-20">
+				<div class="md:w-3/5 lg:w-1/2 mx-auto text-center">
+					<h2 class="text-xl md:text-2xl lg:text-3xl text-white font-light">An experienced team with a deep understanding of today's industry and tomorrow's challenges</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="bg-brand-dark-blue">
+		<div class="container pb-16 sm:pb-24 xl:pb-40 pt-10">
+			<span class="block pb-14 lg:pb-16 text-brand-gold font-medium text-xl uppercase">Our Guiding Values</span>
+			<div class="flex flex-col lg:flex-row text-white">
+				<div class="lg:pt-6 lg:w-[30%]">
+					<img src="/img/icon-open.webp" class="w-auto h-16 lg:h-18" alt="">
+					<p class="text-xl font-light pt-6"><span class="font-medium">Open and approachable</span> with a belief in mutual respect for everyone we do business with and a commitment to deliver on what we promise.</p>
+				</div>
+				<div class="w-full lg:w-px bg-brand-gold h-px lg:h-80 xl:h-70 my-10 sm:my-12 lg:mt-0 lg:mx-8 xl:mx-14 shrink-0"></div>
+				<div class="lg:pt-6 lg:w-[30%]">
+					<img src="/img/icon-diversity.webp" class="w-auto h-16 lg:h-18" alt="">
+					<p class="text-xl font-light pt-6"><span class="font-medium">Committed to promoting equality and diversity</span> and fostering a culture that actively values difference.</p>
+				</div>
+				<div class="w-full lg:w-px bg-brand-gold h-px lg:h-80 xl:h-70 my-10 sm:my-12 lg:mt-0 lg:mx-8 xl:mx-14 shrink-0"></div>
+				<div class="lg:pt-6 lg:w-[30%]">
+					<img src="/img/icon-enviroment.webp" class="w-auto h-16 lg:h-18" alt="">
+					<p class="text-xl font-light pt-6"><span class="font-medium">Look after our environment</span> by focusing on our own actions that affect Climate Change and ensure we work with clients to promote a more Sustainable Future.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="relative" x-data="sectorModal()">
 		<div class="relative z-30">
 			<img src="/img/leadership-image.webp" class="w-3/5 sm:w-3/4 md:w-2/3 lg:w-2/5 xl:w-[37%] h-44 sm:h-70 md:h-80 lg:h-100 xl:h-130 2xl:h-140 object-cover absolute top-0 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-0 object-bottom rounded-b-full" alt="">
@@ -139,7 +194,6 @@ import Footer from '@components/Footer.astro';
 
 	<div class="bg-brand-dark-blue relative">
 		<div class="hidden lg:block absolute bottom-0 inset-x-0 w-full z-20 h-1/2 xl:h-2/3 bg-[linear-gradient(0deg,rgba(63,208,204,0.35)_0%,rgba(63,208,204,0)_100%)]"></div>
-
 		<div class="w-[90%] sm:w-full lg:w-[90%] xl:w-[94%] 2xl:w-[90%] mx-auto relative z-20">
 			<div class="container pb-20 lg:pb-40 xl:pb-60 pt-5 lg:pt-10">
 					<div class="prose max-w-full prose-p:font-light prose-p:leading-6 sm:prose-p:leading-8 sm:prose-p:text-lg sm:prose-p:text-xl prose-h2:text-lg sm:prose-h2:text-xl md:prose-h2:text-2xl xl:prose-h2:text-3xl prose-headings:text-brand-gold prose-h3:text-2xl prose-h3:text-white prose-headings:font-medium prose-h2:leading-7 sm:prose-h2:leading-8 md:prose-h2:leading-10 prose-h2:mb-0 prose-h3:mt-0 text-center lg:text-left sm:prose-h3:text-3xl text-white">
