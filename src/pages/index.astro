@@ -149,7 +149,7 @@ import Footer from '@components/Footer.astro';
 		></div>
 
 		<!-- Modal Content -->
-		<div class="absolute top-0 right-0 sm:w-[94%] h-full z-60">
+		<div class="absolute top-0 right-0 sm:w-[94%] h-full z-60 overflow-y-auto">
 			<div class="relative">
 				<img
 					:src="`/img/${sectors[selectedSector]?.image || 'building-image.webp'}`"
