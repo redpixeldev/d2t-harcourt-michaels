@@ -85,7 +85,23 @@
 	</div>
  </div>
 
- <div class="fixed start-0 z-50 inset-x-0 top-0">
+ <div
+	x-data="{
+		lastScrollY: 0,
+		hidden: false,
+		handleScroll() {
+			const currentScrollY = window.scrollY;
+			if (currentScrollY > this.lastScrollY && currentScrollY > 100) {
+				this.hidden = true;
+			} else {
+				this.hidden = false;
+			}
+			this.lastScrollY = currentScrollY;
+		}
+	}"
+	x-init="window.addEventListener('scroll', () => handleScroll())"
+	:class="hidden ? '-translate-y-full' : 'translate-y-0'"
+	class="fixed start-0 z-50 inset-x-0 top-0 transition-transform duration-300">
 	<div class="container xl:max-w-[1300px] 2xl:max-w-[1580px] px-3 mx-auto pt-6 md:pt-10 xl:pt-14">
 		<div class="flex justify-between gap-16 items-center">
 			<a href="/" class="shrink-0">
