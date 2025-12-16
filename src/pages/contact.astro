@@ -1,0 +1,38 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+---
+
+<Layout title='Astro'>
+	<Header />
+	<div class="relative h-screen">
+		<img src="/img/bg-contact-page.webp" class="absolute inset-0 w-full h-full object-cover z-10" alt="">
+		<div class="absolute inset-0 w-full h-full bg-brand-dark-blue/70 z-20"></div>
+		<div class="container relative z-30">
+			<div class="relative pt-26 sm:pt-36 lg:pt-36 xl:pt-44 xl:pt-52 pb-10 lg:pb-32 xl:pb-40">
+				<div class="lg:w-2/5 xl:w-[45%] text-center lg:text-left">
+					<h3 class="text-brand-gold font-medium text-2xl pb-4 lg:pb-1">Let's connect</h3>
+					<p class="text-white text-lg lg:text-xl xl:text-2xl font-light lg:font-medium leading-8 xl:leading-10">Our approach is open, honest, and focused on building relationships that last. Get in touch to start a conversation about the strategic appointments that will shape the future of your business.</p>
+				</div>
+			</div>
+			<div class="bg-brand-gold/80 z-20 w-full sm:w-3/4 md:w-2/3 lg:w-[45%] 2xl:w-2/5 h-full lg:h-140 xl:h-180 object-cover lg:absolute top-0 right-0 lg:right-11 xl:right-6 2xl:right-5 rounded-4xl lg:rounded-b-full mx-auto lg:ml-auto">
+					<div class="p-8 xs:pt-10 px-8 xs:px-10 pb-10 xs:pb-10 lg:px-0 lg:pt-36 xl:pt-52 space-y-6 mx-auto lg:w-2/3 2xl:w-3/5">
+						<div class="text-brand-dark-blue text-lg lg:text-xl xl:text-2xl font-light">
+							Email
+							<a href="mailto:admin@harcourtmichaels.com" class="text-white btn hover:text-brand-dark-blue block">admin@harcourtmichaels.com</a>
+						</div>
+						<div class="text-brand-dark-blue text-lg lg:text-xl xl:text-2xl font-light">
+							Phone
+							<a href="tel:+44(0)2034054245" class="text-white btn hover:text-brand-dark-blue block">+44 (0)203 405 4245</a>
+						</div>
+						<div class="text-brand-dark-blue text-lg lg:text-xl xl:text-2xl font-light">
+							Address
+							<span class="text-white block">Harcourt Michaels <br/> 2 John Street Holborn <br/> London WC1N 2ES</span>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+	<Footer />
+</Layout>
