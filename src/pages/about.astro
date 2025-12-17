@@ -143,7 +143,7 @@ import Footer from '@components/Footer.astro';
 				:src="`/img/${sectors[selectedSector]?.image}`"
 				@error="imageError = true"
 				@load="imageError = false"
-				class="w-2/3 sm:w-[45%] md:w-2/5 lg:w-[35%] xl:w-2/5 2xl:w-[30%] h-56 sm:h-64 md:h-70 lg:h-110 xl:h-130 object-cover absolute top-0 right-16 md:right-20 lg:right-24 xl:right-36 z-20 object-bottom rounded-b-full z-40"
+				class="w-2/3 sm:w-[45%] md:w-2/5 lg:w-[35%] xl:w-2/5 2xl:w-[30%] h-56 sm:h-64 md:h-85 lg:h-100 xl:h-135 object-cover absolute top-0 right-16 md:right-20 lg:right-24 xl:right-36 z-20 object-top rounded-b-full z-40"
 				alt="">
 			<div class="relative bg-[#3FD0CC]">
 				<button
@@ -158,9 +158,9 @@ import Footer from '@components/Footer.astro';
 				<div
 					class="container relative z-30"
 					:class="sectors[selectedSector]?.image && !imageError ? 'pt-64 sm:pt-40 pb-10 sm:pb-12 lg:py-28 xl:py-36' : 'py-16 md:py-20 lg:py-28 xl:py-36'">
-					<h3 class="text-3xl md:text-4xl font-semibold pb-5" x-text="sectors[selectedSector]?.title"></h3>
-					<p class="text-xl md:text-2xl font-light" x-text="sectors[selectedSector]?.role"></p>
-					<a href="/" class="text-xl md:text-2xl font-light" x-text="sectors[selectedSector]?.email"></a>
+					<h3 class="text-3xl lg:text-4xl font-semibold pb-5" x-text="sectors[selectedSector]?.title"></h3>
+					<p class="text-xl lg:text-2xl font-light" x-text="sectors[selectedSector]?.role"></p>
+					<a href="/" class="text-xl lg:text-2xl font-light" x-text="sectors[selectedSector]?.email"></a>
 				</div>
 			</div>
 			<div class="relative z-20 bg-white shadow-lg">
