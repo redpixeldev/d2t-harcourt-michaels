@@ -29,7 +29,7 @@
 }
 
 @utility btn-primary-small {
-	@apply bg-brand-primary text-brand-dark-blue text-lg rounded-full px-6 py-2.5 hover:bg-brand-gold hover:text-white;
+	@apply bg-brand-primary text-brand-dark-blue text-lg rounded-full px-6 py-1.5 hover:bg-brand-gold hover:text-white;
 }
 
 @layer base {

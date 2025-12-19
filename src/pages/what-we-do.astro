@@ -8,12 +8,12 @@ import Footer from '@components/Footer.astro';
 	<Header />
 	<div class="bg-brand-dark-blue">
 		<div class="container">
-			<div class="relative pt-60 sm:pt-80 lg:pt-36 xl:pt-44 xl:pt-52 pb-16 lg:pb-32 xl:pb-40">
+			<div class="relative pt-60 sm:pt-80 lg:pt-36 xl:pt-44 xl:pt-52 md:pb-16 lg:pb-32 xl:pb-40">
 				<img src="/img/bg-hero-what-we-do.webp" class="w-full z-20 sm:w-3/4 md:w-2/3 lg:w-[45%] 2xl:w-2/5 h-52 sm:h-70 lg:h-140 xl:h-180 object-cover absolute top-0 right-0 lg:right-8 xl:right-6 2xl:right-5 sm:-translate-x-1/6 md:-translate-x-1/4 lg:translate-x-0 rounded-b-full" alt="">
 				<div class="bg-brand-dark-blue/70 lg:bg-brand-dark-blue/50 z-20 w-full sm:w-3/4 md:w-2/3 lg:w-[45%] 2xl:w-2/5 h-52 sm:h-70 lg:h-140 xl:h-180 object-cover absolute top-0 right-0 lg:right-8 xl:right-6 2xl:right-5 sm:-translate-x-1/6 md:-translate-x-1/4 lg:translate-x-0 rounded-b-full"></div>
 				<div class="lg:w-2/5 xl:w-[45%] text-center lg:text-left">
 					<h3 class="text-brand-gold font-medium text-2xl pb-4 lg:pb-1">What we do</h3>
-					<p class="text-white text-lg lg:text-xl xl:text-2xl font-light lg:font-medium leading-8 xl:leading-10">We specialize in executive search and offer leadership consulting and industry intelligence to help organizations shaping the built environment lead with insight, confidence, and resilience.</p>
+					<p class="text-white text-lg lg:text-xl xl:text-2xl font-medium leading-8 xl:leading-10">We specialize in executive search and offer leadership consulting and industry intelligence to help organizations shaping the built environment lead with insight, confidence, and resilience.</p>
 				</div>
 			</div>
 		</div>
@@ -40,12 +40,12 @@ import Footer from '@components/Footer.astro';
 				</div>
 			</div>
 			<div id="executive-search" class="container relative z-50 w-full pb-16 sm:pb-24 lg:pb-36">
-				<div class="flex flex-col-reverse lg:flex-row gap-10 sm:gap-14 lg:gap-20 justify-between items-end">
-					<div class="sm:w-2/3 lg:w-2/5 xl:w-1/3 mx-auto lg:ml-auto">
-						<img src="/img/process-implement.webp" class="w-full h-auto" alt="">
+				<div class="flex flex-col-reverse lg:flex-row gap-5 lg:gap-20 justify-between items-end">
+					<div class="hidden lg:block lg:w-1/2 xl:w-[45%] 2xl:w-2/5 mx-auto lg:ml-auto">
+						<img src="/img/process-image.svg" class="w-full h-auto" alt="">
 					</div>
-					<div class="lg:w-[45%] 2xl:w-2/5 pt-44 sm:pt-60 lg:pt-28 xl:pt-36 2xl:pt-64 space-y-11 sm:space-y-16 lg:space-y-24 xl:space-y-32">
-							<div class="prose max-w-full prose-p:text-white prose-p:font-light prose-p:leading-6 sm:prose-p:leading-8 sm:prose-p:text-lg sm:prose-p:text-xl prose-p:lg:text-2xl prose-h2:text-lg sm:prose-h2:text-xl md:prose-h2:text-2xl xl:prose-h2:text-3xl prose-headings:text-brand-gold prose-headings:font-medium prose-h2:leading-7 sm:prose-h2:leading-8 md:prose-h2:leading-10 prose-h3:mb-0 prose-h4:text-white md:prose-h4:text-xl lg:prose-h4:text-2xl prose-h4:font-light text-center lg:text-left prose-h3:text-[26px] md:prose-h3:text-3xl prose-h3:text-white">
+					<div class="lg:w-[45%] 2xl:w-2/5 pt-44 sm:pt-60 lg:pt-28 xl:pt-36 2xl:pt-64 space-y-5 sm:space-y-11 lg:space-y-24 xl:space-y-32">
+						<div class="prose max-w-full prose-p:text-white prose-p:font-light prose-p:leading-6 sm:prose-p:leading-8 sm:prose-p:text-lg sm:prose-p:text-xl prose-p:lg:text-2xl prose-h2:text-lg sm:prose-h2:text-xl md:prose-h2:text-2xl xl:prose-h2:text-3xl prose-headings:text-brand-gold prose-headings:font-medium prose-h2:leading-7 sm:prose-h2:leading-8 md:prose-h2:leading-10 prose-h3:mb-0 prose-h4:text-white md:prose-h4:text-xl lg:prose-h4:text-2xl prose-h4:font-light text-center lg:text-left prose-h3:text-[26px] md:prose-h3:text-3xl prose-h3:text-white">
 							<div>
 								<h3 class="block lg:hidden pb-4 sm:pb-5">Executive Search</h3>
 								<h4 class="pb-4 block lg:hidden">We find senior leaders who bring more than just experience—they bring energy, vision, and the ability to make things happen</h4>
@@ -53,9 +53,22 @@ import Footer from '@components/Footer.astro';
 								<p>At Harcourt Michaels we work closely with you to understand your business, culture, and goals. Then we go out and find people who don't just fit—they elevate what's possible.</p>
 							</div>
 						</div>
+						<div class="block lg:hidden xs:w-5/6 md:w-3/4 mx-auto">
+							<img src="/img/process-image.svg" class="w-full h-auto" alt="">
+						</div>
 						<div class="bg-brand-primary rounded-xl p-9 xl:p-12 pt-7 xl:w-5/6">
 							<h4 class="text-lg xs:text-xl md:text-2xl font-medium text-white pb-2 xs:pb-3 md:pb-4">Implement</h4>
 							<p class="font-light xs:text-lg md:text-xl text-brand-dark-blue">We put in place an achievable strategy with agreed timescales. We consider the geographic implications and whether the desired skills can be found locally, nationally or internationally, implementing a structured process to identify high achievers with the right skill set and experience.</p>
+						</div>
+						<!-- UNDERSTAND -->
+						<div class="bg-brand-primary rounded-xl p-9 xl:p-12 pt-7 xl:w-5/6 hidden">
+							<h4 class="text-lg xs:text-xl md:text-2xl font-medium text-white pb-2 xs:pb-3 md:pb-4">Understand</h4>
+							<p class="font-light xs:text-lg md:text-xl text-brand-dark-blue">We develop a clear assignment brief based on the business profile and values, the specific position requirements and the desired personality traits. Understanding the key performance criteria around the role is essential and we identify any challenges or restricting factors to the search from the outset. Listening and understanding at the outset forms the foundation of a successful project</p>
+						</div>
+						<!-- DELIVER -->
+							<div class="bg-brand-primary rounded-xl p-9 xl:p-12 pt-7 xl:w-5/6 hidden">
+								<h4 class="text-lg xs:text-xl md:text-2xl font-medium text-white pb-2 xs:pb-3 md:pb-4">Deliver</h4>
+								<p class="font-light xs:text-lg md:text-xl text-brand-dark-blue">We engage and evaluate the defined target pool resulting in a qualified shortlist of individuals that meet all of the criteria of the role. We conduct in depth face-to-face assessments and provide full reports, continuing our involvement in the process until the desired candidate is secured.</p>
 						</div>
 					</div>
 				</div>
@@ -107,6 +120,7 @@ import Footer from '@components/Footer.astro';
 	<div class="relative z-30 bg-brand-primary md:bg-transparent">
 		<div class="container md:-mt-6 lg:-mt-12 xl:-mt-20 md:-mb-30 lg:-mb-24 xl:-mb-30 2xl:-mb-20">
 			<div class="md:w-3/4 lg:w-3/5 xl:w-[45%] 2xl:w-2/5 mx-auto pb-12 xs:pb-16 pt-6 xs:pt-20 xl:pt-10 2xl:pt-0">
+				<h2 class="block md:hidden text-2xl sm:text-3xl font-medium text-center pb-5">Industry Intelligence</h2>
 				<p class="font-light text-center xs:text-lg xl:text-xl">We deliver clear, strategic insight into leadership structures, compensation trends, and market movements—giving our clients up-to-the-minute intelligence to make confident, informed decisions.</p>
 			</div>
 		</div>
