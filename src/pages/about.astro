@@ -6,11 +6,19 @@ import Footer from '@components/Footer.astro';
 
 <Layout title='Astro'>
 	<Header />
-	<div class="bg-brand-dark-blue">
+	<div class="bg-brand-dark-blue relative">
+		<img
+			src='/img/about-hero-image.webp'
+			class='absolute inset-x-0 top-0 z-20 block h-[155px] w-full rounded-b-full object-cover [clip-path:ellipse(50%_120%_at_50%_-20%)] sm:hidden'
+			alt=''
+		/>
+		<div
+			class='bg-brand-dark-blue/70 absolute inset-x-0 top-0 z-20 block h-[155px] w-full rounded-b-full object-cover [clip-path:ellipse(50%_120%_at_50%_-20%)] sm:hidden'>
+		</div>
 		<div class="container">
-			<div class="relative pt-60 sm:pt-80 lg:pt-36 xl:pt-44 xl:pt-52 pb-16 lg:pb-32 xl:pb-40">
-				<img src="/img/about-hero-image.webp" class="w-full z-20 sm:w-3/4 md:w-2/3 lg:w-[45%] 2xl:w-2/5 h-52 sm:h-70 lg:h-140 xl:h-180 object-cover absolute top-0 right-0 lg:right-8 xl:right-6 2xl:right-5 sm:-translate-x-1/6 md:-translate-x-1/4 lg:translate-x-0 rounded-b-full" alt="">
-				<div class="bg-brand-dark-blue/70 lg:bg-brand-dark-blue/50 z-20 w-full sm:w-3/4 md:w-2/3 lg:w-[45%] 2xl:w-2/5 h-52 sm:h-70 lg:h-140 xl:h-180 object-cover absolute top-0 right-0 lg:right-8 xl:right-6 2xl:right-5 sm:-translate-x-1/6 md:-translate-x-1/4 lg:translate-x-0 rounded-b-full"></div>
+			<div class="relative pt-52 sm:pt-80 lg:pt-36 xl:pt-44 xl:pt-52 pb-16 lg:pb-32 xl:pb-40">
+				<img src="/img/about-hero-image.webp" class="hidden sm:block w-full z-20 sm:w-3/4 md:w-2/3 lg:w-[45%] 2xl:w-2/5 h-52 sm:h-70 lg:h-140 xl:h-180 object-cover absolute top-0 right-0 lg:right-8 xl:right-6 2xl:right-5 sm:-translate-x-1/6 md:-translate-x-1/4 lg:translate-x-0 rounded-b-full" alt="">
+				<div class="bg-brand-dark-blue/70 lg:bg-brand-dark-blue/50 hidden sm:block z-20 w-full sm:w-3/4 md:w-2/3 lg:w-[45%] 2xl:w-2/5 h-52 sm:h-70 lg:h-140 xl:h-180 object-cover absolute top-0 right-0 lg:right-8 xl:right-6 2xl:right-5 sm:-translate-x-1/6 md:-translate-x-1/4 lg:translate-x-0 rounded-b-full"></div>
 				<div class="lg:w-2/5 xl:w-[45%] text-center lg:text-left">
 					<h3 class="text-brand-gold font-medium text-2xl pb-4 lg:pb-1">About us</h3>
 					<p class="text-white text-lg lg:text-xl xl:text-2xl font-medium leading-8 xl:leading-10">People are at the heart of everything we do. Through openness, respect, and a rigorous, inclusive search process, our experienced team ensures confidentiality and integrity at every step—acting as a true extension of your business and a trusted advisor.</p>
