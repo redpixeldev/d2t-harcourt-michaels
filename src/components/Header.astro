@@ -1,5 +1,5 @@
 <!-- MOBILE MENU -->
-<div x-data="{ mobileMenuOpen: false }" x-effect="document.body.classList.toggle('overflow-hidden', mobileMenuOpen)">
+<div x-data="{ mobileMenuOpen: false, clickClose() { this.mobileMenuOpen = false; } }" x-effect="document.body.classList.toggle('overflow-hidden', mobileMenuOpen)">
  <div
 	x-show="mobileMenuOpen"
 	x-transition:enter="transition ease-out duration-300"
@@ -22,42 +22,42 @@
 		</div>
 		<ul class="flex flex-col text-center text-white font-light text-xl tracking-tight space-y-3 py-14">
 			<li class="btn hover:text-brand-gold">
-				<a href="/about">
+				<a href="/about" @click="clickClose">
 					About us
 				</a>
 			</li>
 			<li class="btn hover:text-brand-gold">
-				<a href="/about#leadership">
+				<a href="/about#leadership" @click="clickClose">
 					Leadership Team
 				</a>
 			</li>
 			<li class="btn hover:text-brand-gold">
-				<a href="/about#sustainability">
+				<a href="/about#sustainability" @click="clickClose">
 					Sustainability
 				</a>
 			</li>
 			<li class="btn hover:text-brand-gold">
-				<a href="/about#equality">
+				<a href="/about#equality" @click="clickClose">
 					Equality, Diversity & Inclusion
 				</a>
 			</li>
 			<li class="btn hover:text-brand-gold">
-				<a href="/what-we-do">
+				<a href="/what-we-do" @click="clickClose">
 					What we do
 				</a>
 			</li>
 			<li class="btn hover:text-brand-gold">
-				<a href="/what-we-do#executive-search">
+				<a href="/what-we-do#executive-search" @click="clickClose">
 					Executive Search
 				</a>
 			</li>
 			<li class="btn hover:text-brand-gold">
-				<a href="/what-we-do#leadership-consulting">
+				<a href="/what-we-do#leadership-consulting" @click="clickClose">
 					Leadership Consulting
 				</a>
 			</li>
 			<li class="btn hover:text-brand-gold">
-				<a href="/what-we-do#industry-intelligence">
+				<a href="/what-we-do#industry-intelligence" @click="clickClose">
 					Industry Intelligence
 				</a>
 			</li>
