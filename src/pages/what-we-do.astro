@@ -38,7 +38,7 @@ import Footer from '@components/Footer.astro';
 
 	<div class='bg-brand-dark-blue relative'>
 		<div
-			class='absolute inset-0 z-10 h-1/2 w-full bg-[linear-gradient(0deg,rgba(149,128,83,0)_0%,rgba(149,128,83,0.35)_40.87%,rgba(149,128,83,0.35)_61.06%,rgba(149,128,83,0)_100%)]'>
+			class='absolute inset-0 z-10 h-1/2 w-full bg-[linear-gradient(0deg,rgba(149,128,83,0)_0%,rgba(149,128,83,0.35)_40.87%,rgba(149,128,83,0.35)_61.06%,rgba(149,128,83,0)_100%)] [clip-path:ellipse(75%_100%_at_50%_0%)] sm:[clip-path:none]'>
 		</div>
 		<div class='relative z-20 container'>
 			<div
@@ -63,7 +63,7 @@ import Footer from '@components/Footer.astro';
 		<div class='relative z-30'>
 			<div class='relative'>
 				<div
-					class='absolute top-0 left-1/2 h-[165px] w-full -translate-x-1/2 rounded-b-full bg-[linear-gradient(160.91deg,#3FD0CC_30.97%,#958053_82.71%)] object-cover object-bottom sm:h-40 md:h-80 lg:left-0 lg:h-100 lg:w-1/2 lg:translate-x-0 xl:h-110 2xl:h-130'>
+					class='absolute top-0 left-1/2 h-[165px] w-full -translate-x-1/2 rounded-b-full bg-[linear-gradient(160.91deg,#3FD0CC_30.97%,#958053_82.71%)] object-cover object-bottom [clip-path:ellipse(50%_100%_at_50%_0%)] sm:h-40 sm:[clip-path:none] md:h-80 lg:left-0 lg:h-100 lg:w-1/2 lg:translate-x-0 xl:h-110 2xl:h-130'>
 					<div
 						class='relative top-8 left-0 z-40 w-full text-center text-white sm:w-4/5 md:w-2/3 lg:absolute lg:top-14 lg:w-full xl:top-20 2xl:top-24'>
 						<div class='mx-auto hidden w-4/5 sm:w-1/2 md:w-2/5 lg:block lg:w-3/4 2xl:w-2/3'>
@@ -183,9 +183,9 @@ import Footer from '@components/Footer.astro';
 						</svg>
 					</div>
 					<div
-						class='space-y-5 pt-24 sm:space-y-11 sm:pt-38 md:pt-74 lg:w-[45%] lg:space-y-24 lg:pt-28 xl:space-y-32 xl:pt-36 2xl:w-2/5 2xl:pt-64'>
+						class='space-y-5 pt-40 sm:space-y-11 sm:pt-38 md:pt-74 lg:w-[45%] lg:space-y-24 lg:pt-28 xl:space-y-32 xl:pt-36 2xl:w-2/5 2xl:pt-64'>
 						<div
-							class='prose prose-p:text-white prose-p:font-light prose-p:leading-6 sm:prose-p:leading-8 sm:prose-p:text-lg sm:prose-p:text-xl prose-p:lg:text-2xl prose-h2:text-lg sm:prose-h2:text-xl md:prose-h2:text-2xl xl:prose-h2:text-3xl prose-headings:text-brand-gold prose-headings:font-medium prose-h2:leading-7 sm:prose-h2:leading-8 md:prose-h2:leading-10 prose-h3:mb-0 prose-h4:text-white md:prose-h4:text-xl lg:prose-h4:text-2xl prose-h4:font-light prose-h3:text-[26px] md:prose-h3:text-3xl prose-h3:text-white max-w-full text-center lg:text-left'>
+							class='prose prose-p:text-white prose-p:font-light prose-p:leading-6 sm:prose-p:leading-8 sm:prose-p:text-xl prose-p:lg:text-2xl prose-h2:text-lg sm:prose-h2:text-xl md:prose-h2:text-2xl xl:prose-h2:text-3xl prose-headings:text-brand-gold prose-headings:font-medium prose-h2:leading-7 sm:prose-h2:leading-8 md:prose-h2:leading-10 prose-h3:mb-0 prose-h4:text-white md:prose-h4:text-xl lg:prose-h4:text-2xl prose-h4:font-light prose-h3:text-[26px] md:prose-h3:text-3xl prose-h3:text-white max-w-full text-center lg:text-left'>
 							<div>
 								<h3 class='block pb-4 sm:pb-5 lg:hidden'>Executive Search</h3>
 								<h4 class='block pb-4 lg:hidden'>
